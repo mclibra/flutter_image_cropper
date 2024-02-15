@@ -21,7 +21,13 @@ import 'package:flutter/foundation.dart' show immutable;
 abstract class CroppedFileBase {
   /// Construct a CroppedFile
   // ignore: avoid_unused_constructor_parameters
-  const CroppedFileBase(String path);
+  const CroppedFileBase(
+    String path,
+    double x,
+    double y,
+    double width,
+    double height,
+  );
 
   /// Get the path of the picked file.
   ///
@@ -61,5 +67,25 @@ abstract class CroppedFileBase {
   /// In order to make sure that system resources are freed, the stream must be read to completion or the subscription on the stream must be cancelled.
   Stream<Uint8List> openRead([int? start, int? end]) {
     throw UnimplementedError('openRead() has not been implemented.');
+  }
+
+  /// Get the x-coordinate of the cropped region.
+  double get x {
+    throw UnimplementedError('.x has not been implemented.');
+  }
+
+  /// Get the y-coordinate of the cropped region.
+  double get y {
+    throw UnimplementedError('.y has not been implemented.');
+  }
+
+  /// Get the width of the cropped region.
+  double get width {
+    throw UnimplementedError('.width has not been implemented.');
+  }
+
+  /// Get the height of the cropped region.
+  double get height {
+    throw UnimplementedError('.height has not been implemented.');
   }
 }
