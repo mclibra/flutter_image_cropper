@@ -13,7 +13,13 @@ class CroppedFile extends CroppedFileBase {
   /// Construct a CroppedFile object, from its `bytes`.
   ///
   /// Optionally, you may pass a `path`. See caveats in [CroppedFileBase.path].
-  CroppedFile(String path) : super(path) {
+  CroppedFile(
+    String path,
+    double x,
+    double y,
+    double width,
+    double height,
+  ) : super(path, x, y, width, height) {
     throw UnimplementedError(
         'CroppedFile is not available in your current platform.');
   }

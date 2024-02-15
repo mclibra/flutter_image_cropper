@@ -95,7 +95,18 @@ class MethodChannelImageCropper extends ImageCropperPlatform {
 
     final String? resultPath =
         await _channel.invokeMethod('cropImage', arguments);
-    return resultPath == null ? null : CroppedFile(resultPath);
+
+    if (resultPath == null) return null;
+
+    var splitResult = resultPath.split("|\\|");
+
+    return CroppedFile(
+      splitResult[0],
+      double.parse(splitResult[1]),
+      double.parse(splitResult[2]),
+      double.parse(splitResult[3]),
+      double.parse(splitResult[4]),
+    );
   }
 
   ///
@@ -147,6 +158,16 @@ class MethodChannelImageCropper extends ImageCropperPlatform {
       return null;
     }
     final String? resultPath = await _channel.invokeMethod('recoverImage');
-    return resultPath == null ? null : CroppedFile(resultPath);
+    if (resultPath == null) return null;
+
+    var splitResult = resultPath.split("|\\|");
+
+    return CroppedFile(
+      splitResult[0],
+      double.parse(splitResult[1]),
+      double.parse(splitResult[2]),
+      double.parse(splitResult[3]),
+      double.parse(splitResult[4]),
+    );
   }
 }
