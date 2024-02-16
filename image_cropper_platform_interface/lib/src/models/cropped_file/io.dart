@@ -30,6 +30,26 @@ class CroppedFile extends CroppedFileBase {
   }
 
   @override
+  double get x {
+    return x;
+  }
+
+  @override
+  double get y {
+    return y;
+  }
+
+  @override
+  double get width {
+    return width;
+  }
+
+  @override
+  double get height {
+    return height;
+  }
+
+  @override
   Future<String> readAsString({Encoding encoding = utf8}) {
     return _file.readAsString(encoding: encoding);
   }
