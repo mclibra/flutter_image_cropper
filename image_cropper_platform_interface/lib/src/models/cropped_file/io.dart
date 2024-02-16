@@ -31,22 +31,22 @@ class CroppedFile extends CroppedFileBase {
 
   @override
   double get x {
-    return x;
+    return this.x;
   }
 
   @override
   double get y {
-    return y;
+    return this.y;
   }
 
   @override
   double get width {
-    return width;
+    return this.width;
   }
 
   @override
   double get height {
-    return height;
+    return this.height;
   }
 
   @override
