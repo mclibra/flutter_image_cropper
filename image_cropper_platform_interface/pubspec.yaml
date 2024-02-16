@@ -1,7 +1,8 @@
-name: mclibra_image_cropper_platform_interface
+name: image_cropper_platform_interface
 description: A common platform interface for the image_cropper plugin.
 repository: https://github.com/mclibra/flutter_image_cropper
 version: 5.0.0
+publish_to: none
 
 environment:
   sdk: '>=2.18.0 <4.0.0'
@@ -10,7 +11,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  mclibra_plugin_platform_interface: ^2.1.0
+  plugin_platform_interface: ^2.1.0
   http: ^1.0.0
 
 dev_dependencies:
